@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Post</title>
+</head>
+<body>
+    {% for blog_post in posts %}
+        {% if blog_post["id"] == 2 %}
+            <h1>{{ blog_post["title"] }}</h1>   <!-- parsing the data for Larger title font -->
+        {% else %}
+            <h6>It was not id 2.</h6>
+        {% endif %}
+            <!-- <h2>{{ blog_post["subtitle"] }}</h2> -->    <!-- parsing the data for medium sub-title font -->
+    {% endfor %} <!-- the end of the For Loop. -->
+</body>
+<footer>
+    <p>{{ CURRENT_YEAR }}</p>
+</footer>
+</html>
